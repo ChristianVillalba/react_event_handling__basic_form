@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function App() {
   const [headingText, setHeadingText] = useState("Hello");
-  const [mouseOverStyle, setmouseOverStyle] = useState({
+  const [mouseStyle, setmouseStyle] = useState({
     backgroundColor: "white"
   });
 
@@ -10,7 +10,10 @@ function App() {
     setHeadingText("Submitted");
   }
   function handlemouseOver() {
-    setmouseOverStyle({ backgroundColor: "black" });
+    setmouseStyle({ backgroundColor: "black" });
+  }
+  function handlemouseOut() {
+    setmouseStyle({ backgroundColor: "white" });
   }
 
   return (
@@ -19,7 +22,8 @@ function App() {
       <input type="text" placeholder="What's your name?" />
       <button
         onMouseOver={handlemouseOver}
-        style={mouseOverStyle}
+        onMouseOut={handlemouseOut}
+        style={mouseStyle}
         onClick={handleClick}
       >
         Submit
