@@ -33,3 +33,38 @@ function App() {
 }
 
 export default App;
+
+// ANGELA YU'S SOLUTION
+
+// import React, { useState } from "react";
+
+// function App() {
+//   const [headingText, setHeadingText] = useState("Hello");
+//   const [isMouseOver, setmouseOver] = useState({ false });
+//   function handleClick() {
+//     setHeadingText("Submitted");
+//   }
+//   function handlemouseOver() {
+//     setmouseOver(true);
+//   }
+//   function handlemouseOut() {
+//     setmouseOut(false);
+//   }
+
+//   return (
+//     <div className="container">
+//       <h1>{headingText}</h1>
+//       <input type="text" placeholder="What's your name?" />
+//       <button
+//         onMouseOver={handlemouseOver}
+//         onMouseOut={handlemouseOut}
+//         style={{ backgroundColor : isMouseOver ? "black" : "white" }}
+//         onClick={handleClick}
+//       >
+//         Submit
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
